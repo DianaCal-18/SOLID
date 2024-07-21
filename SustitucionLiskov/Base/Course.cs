@@ -7,5 +7,6 @@ namespace SustitucionLiskov.Base
         public string Title { get; set; }
 
         public abstract void Subscribe(Student std);
+        public abstract string CourseDetails();
     }
 }

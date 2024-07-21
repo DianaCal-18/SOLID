@@ -13,10 +13,14 @@ namespace SustitucionLiskov
             Course offlineCourse = new OfflineCourse { CourseId = 1015, Title = "Curso de C# Intermedio Presencial" };
             Course hybridCourse = new HybridCourse { CourseId = 1016, Title = "Curso de C# Avanzado Semipresencial" };
 
-            Console.WriteLine("***CURSOS REGISTRADOS***");
-            Console.WriteLine($"\nOnline Course = {onlineCourse.Title} ");
-            Console.WriteLine($"Offline Course = {offlineCourse.Title} ");
-            Console.WriteLine($"Hybrid Course = {hybridCourse.Title} ");
+            CourseDetails(onlineCourse);
+            CourseDetails(offlineCourse);
+            CourseDetails(hybridCourse);
+        }
+
+        static void CourseDetails(Course course)
+        {
+         Console.WriteLine(course.CourseDetails());
         }
     }
 }
